@@ -213,7 +213,6 @@ with col2:
                     # We wrap this in a try-block so a file error doesn't crash the UI
                     try:
                         log_training_data(current_fen, move_san, analysis_report, ai_feedback)
-                        st.toast("Intelligence logged to dataset.jsonl", icon="💾")
                     except Exception as log_error:
                         st.warning(f"Tactical Log Failed: {log_error}")
 
@@ -225,4 +224,5 @@ with col2:
                 st.write("Awaiting the first move to begin analysis.")
 
 st.divider()
+
 st.caption("Tactical Review Engine | Groq Llama-3")
